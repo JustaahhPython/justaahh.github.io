@@ -1,32 +1,197 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justaahh</title>
     <style>
-        body { 
-            font-family: Arial; 
-            background: #111; 
-            color: white; 
-            text-align: center; 
-            padding: 50px;
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0D0D0D;
+            color: #FFFFFF;
         }
-        h1 { font-size: 48px; margin-bottom: 10px; }
-        p { font-size: 20px; }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #0D0D0D;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #7F5BFF;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #7F5BFF;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 80px;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            color: #CCCCCC;
+        }
         .btn {
-            background: #ff0066;
-            padding: 15px 30px;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: #7F5BFF;
             border-radius: 8px;
             color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #00D4FF;
+            box-shadow: 0 0 20px #00D4FF;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #7F5BFF;
+        }
+
+        /* SHOP GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #1A1A1A;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 0 25px #7F5BFF;
+            transform: translateY(-5px);
+        }
+
+        /* SOCIALS */
+        .socials a {
+            margin-right: 20px;
+            font-size: 1.4rem;
+            color: #00D4FF;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .socials a:hover {
+            color: #7F5BFF;
+            text-shadow: 0 0 15px #7F5BFF;
         }
     </style>
 </head>
 <body>
-    <h1>JUSTAAHH</h1>
-    <p>De officiële website van Justin.</p>
-    <a class="btn" href="#">Coming soon</a>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Justaahh</div>
+        <ul>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Welcome to Justaahh</h1>
+        <p>Premium dark‑mode designs, tools, and digital creations.</p>
+        <a class="btn" href="#journey">Start the Journey</a>
+    </div>
+
+    <!-- JOURNEY -->
+    <section id="journey">
+        <h2>Journey</h2>
+        <p>
+            The Justaahh journey is all about building, improving, and creating digital experiences 
+            that feel smooth, modern, and powerful. From scripts to dashboards to full websites — 
+            everything follows the same philosophy: clean, premium, dark‑mode excellence.
+        </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            I'm Justin — also known as Justaahh. I create digital tools, automation scripts, dashboards, 
+            and premium UI designs. My focus is simplicity, clean visuals, and powerful functionality.
+        </p>
+    </section>
+
+    <!-- SHOP -->
+    <section id="shop">
+        <h2>Shop</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Dark Mode Dashboard Template</h3>
+                <p>A clean, modern dashboard UI ready for your projects.</p>
+                <p><strong>€9.99</strong></p>
+            </div>
+            <div class="card">
+                <h3>Python Automation Pack</h3>
+                <p>Useful scripts for workflow automation and efficiency.</p>
+                <p><strong>€4.99</strong></p>
+            </div>
+            <div class="card">
+                <h3>Justa UI Elements</h3>
+                <p>Premium UI components for websites and apps.</p>
+                <p><strong>€7.99</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="socials">
+            <a href="https://github.com/JustaahhPython">GitHub</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitch</a>
+            <a href="mailto:justaahh@example.com">Email</a>
+        </div>
+    </section>
+
 </body>
 </html>
